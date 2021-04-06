@@ -43,3 +43,4 @@ for file in glob.glob(dir_path + '/send/*.*'):
     client.sendall(fileInfo)
     print(f"SENT FILE\n\n")
     time.sleep(0.5)
+input('\n\n\n\nPress Enter to close...')
