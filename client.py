@@ -42,5 +42,7 @@ for file in glob.glob(dir_path + '/send/*.*'):
     time.sleep(.2)
     client.sendall(fileInfo)
     print(f"SENT FILE\n\n")
+    client.recv(1024) #Wait until "OK" is sent by server
     time.sleep(0.5)
-input('\n\n\n\nPress Enter to close...')
+
+client.send('done'.encode('utf-8'))
