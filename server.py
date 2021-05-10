@@ -1,6 +1,6 @@
 #Recieving file
 import socket
-import os
+import os, sys
 
 #-----------------------SERVER---------------------------
 #CONSTANTS
@@ -33,4 +33,6 @@ while True:
         f.write(fileInfo)
         f.close()
         print(f"RECIEVED FILE {name}")
-input('\n\n\n\nPress Enter to close...')
+        conn.send('k'.encode('utf-8'))
+    elif msg == 'done':
+        sys.exit()
