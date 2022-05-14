@@ -1,4 +1,4 @@
-#### Allows User to transfer files over any network
+#### Allows Users to transfer files between each other over any network
 
 ___
 
